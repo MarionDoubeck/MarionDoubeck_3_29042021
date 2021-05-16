@@ -1,5 +1,5 @@
 Projet 3
-Formation dév. Front end
+Formation dév Front end
 Open Classrooms
 Marion Doubeck
 Début P3 le jeudi 29 avril 2021
