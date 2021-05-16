@@ -1,0 +1,15 @@
+.btn{
+    align-self: center;
+    width: fit-content;
+    border-color: transparent;
+    font-size: 2.6em;
+    height: 3em;
+    box-shadow: 10px 10px 10px #cccccc;
+    border-radius: 50em;
+    background: linear-gradient(to bottom right,$color-secondary,$color-primary);
+    color: white;
+    @media (min-width:1000px){
+        font-size: 20px;
+        height:2em;
+    }
+}

@@ -1,0 +1,38 @@
+body{
+    @media (min-width:1000px){
+        min-height: 100vh;
+        max-width: 1800px;
+        position: relative;
+    }
+}
+footer{
+    background-color: #353535;
+    line-height: 5em;
+    color: white;
+    padding-bottom: 2em;
+    ul{
+        list-style: none; 
+        li>a{text-decoration: none;
+                color: white;}
+        @media (min-width:1000px){
+            display: flex;
+            font-size : 20px;
+            justify-content: space-around;
+            height: 30px;
+        }
+     }
+     .logo{
+        line-height: 3em;
+    }
+}
+
+
+#resto_footer::before {
+    font-family: "Font Awesome 5 Free"; font-weight: 800; content: "\f2e7";
+    margin-right: 0.5em;
+}
+
+#partenaire_footer::before {
+    font-family: "Font Awesome 5 Free"; font-weight: 800; content: "\f4c4";
+    margin-right: 0.5em;
+}

@@ -1,0 +1,1625 @@
+body {
+  margin: 0;
+}
+
+#menu_photo img {
+  height: 45em;
+  width: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+#menu {
+  border-radius: 90px;
+  background-color: #f2f2f2;
+  position: relative;
+  top: -10em;
+  padding-top: 2em;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -ms-flex-line-pack: center;
+      align-content: center;
+}
+
+#menu #nom_menu {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+#menu #nom_menu h1 {
+  padding-left: 0.5em;
+  font-family: Shrikhand;
+  font-size: 4.5em;
+}
+
+#menu #nom_menu .menu_coeur {
+  -ms-flex-item-align: center;
+      align-self: center;
+  font-size: 4em;
+  margin-left: 1.5em;
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+#menu #nom_menu .menu_coeur .far {
+  position: absolute;
+  left: 0;
+}
+
+.les_plats {
+  padding-left: 3em;
+  padding-right: 3em;
+}
+
+.les_plats .souligne {
+  -webkit-text-decoration: underline #99E2D0 solid 8px;
+          text-decoration: underline #99E2D0 solid 8px;
+  text-underline-offset: 1rem;
+}
+
+.plat {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  border-radius: 40px;
+  -webkit-box-shadow: 10px 10px 10px #cccccc;
+          box-shadow: 10px 10px 10px #cccccc;
+  background-color: white;
+  height: 11em;
+  margin-bottom: 2em;
+  width: 100%;
+  overflow: hidden;
+  border: steelblue solid 3px;
+}
+
+.plat .plat_description {
+  padding-left: 1em;
+  width: 100%;
+  position: relative;
+}
+
+.plat .plat_description h3 {
+  position: absolute;
+  top: -0.5em;
+  height: 1.5em;
+  width: 95%;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  display: block;
+  overflow: hidden;
+}
+
+.plat .plat_description p {
+  position: absolute;
+  top: 1.5em;
+  height: 2em;
+  width: 95%;
+  font-size: 2.4em;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  display: block;
+  overflow: hidden;
+}
+
+.plat .plat_prix {
+  height: 100%;
+  width: 20%;
+  font-size: 2.7em;
+  text-align: center;
+  padding-top: 1.5em;
+  color: black;
+}
+
+.plat .validation {
+  width: 0;
+}
+
+#bouton {
+  -ms-flex-item-align: center;
+      -ms-grid-row-align: center;
+      align-self: center;
+}
+
+#commander {
+  margin-top: 2.5em;
+  margin-bottom: 5em;
+  padding-left: 3em;
+  padding-right: 3em;
+}
+
+@font-face {
+  font-family: 'Roboto';
+  src: url("../polices/roboto/Roboto-Regular.ttf");
+}
+
+@font-face {
+  font-family: 'Roboto-Bold';
+  src: url("../polices/roboto/Roboto-Bold.ttf");
+}
+
+@font-face {
+  font-family: 'Shrikhand';
+  src: url("../polices/Shrikhand/Shrikhand-Regular.ttf");
+}
+
+h1 {
+  font-family: Roboto-Bold;
+  font-size: 3.8em;
+}
+
+h2 {
+  font-family: Roboto-Bold;
+  font-size: 3em;
+}
+
+h3 {
+  font-family: Roboto;
+  font-size: 3em;
+}
+
+p, ul {
+  font-family: Roboto;
+  font-size: 3em;
+}
+
+.logo {
+  font-family: Shrikhand;
+}
+
+@font-face {
+  font-family: 'Roboto';
+  src: url("../polices/roboto/Roboto-Regular.ttf");
+}
+
+@font-face {
+  font-family: 'Roboto-Bold';
+  src: url("../polices/roboto/Roboto-Bold.ttf");
+}
+
+@font-face {
+  font-family: 'Shrikhand';
+  src: url("../polices/Shrikhand/Shrikhand-Regular.ttf");
+}
+
+h1 {
+  font-family: Roboto-Bold;
+  font-size: 3.8em;
+}
+
+h2 {
+  font-family: Roboto-Bold;
+  font-size: 3em;
+}
+
+h3 {
+  font-family: Roboto;
+  font-size: 3em;
+}
+
+p, ul {
+  font-family: Roboto;
+  font-size: 3em;
+}
+
+.logo {
+  font-family: Shrikhand;
+}
+
+#loader-container {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  z-index: 2;
+  background: -webkit-gradient(linear, left bottom, left top, from(#460033), to(#301255));
+  background: linear-gradient(to top, #460033, #301255);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-animation: disparaitre 6s linear forwards;
+          animation: disparaitre 6s linear forwards;
+}
+
+#loader-container #car, #loader-container #fork, #loader-container #phone {
+  font-size: 6em;
+  color: #99E2D0;
+  position: absolute;
+}
+
+#loader-container #phone {
+  left: 50px;
+}
+
+#loader-container #fork {
+  right: 50px;
+}
+
+#loader-container #car {
+  -webkit-animation: chargeur 5.8s linear infinite forwards;
+          animation: chargeur 5.8s linear infinite forwards;
+  -webkit-animation-delay: 1ms;
+          animation-delay: 1ms;
+}
+
+#loader-container #neon {
+  font-size: 6em;
+  font-family: 'Shrikhand';
+  color: #3c0244;
+}
+
+#loader-container #neon .lettre:nth-child(1) {
+  -webkit-animation: allumer 3.9s;
+          animation: allumer 3.9s;
+  -webkit-animation-delay: 1.3s;
+          animation-delay: 1.3s;
+}
+
+#loader-container #neon .lettre:nth-child(2) {
+  -webkit-animation: allumer 3.5s;
+          animation: allumer 3.5s;
+  -webkit-animation-delay: 1.8s;
+          animation-delay: 1.8s;
+}
+
+#loader-container #neon .lettre:nth-child(3) {
+  -webkit-animation: allumer 3.1s;
+          animation: allumer 3.1s;
+  -webkit-animation-delay: 2.3s;
+          animation-delay: 2.3s;
+}
+
+#loader-container #neon .lettre:nth-child(4) {
+  -webkit-animation: allumer 2.7s;
+          animation: allumer 2.7s;
+  -webkit-animation-delay: 2.8s;
+          animation-delay: 2.8s;
+}
+
+#loader-container #neon .lettre:nth-child(5) {
+  -webkit-animation: allumer 2.3s;
+          animation: allumer 2.3s;
+  -webkit-animation-delay: 3.3s;
+          animation-delay: 3.3s;
+}
+
+#loader-container #neon .lettre:nth-child(6) {
+  -webkit-animation: allumer 1.9s;
+          animation: allumer 1.9s;
+  -webkit-animation-delay: 3.8s;
+          animation-delay: 3.8s;
+}
+
+#loader-container #neon .lettre:nth-child(7) {
+  -webkit-animation: allumer 1.5s;
+          animation: allumer 1.5s;
+  -webkit-animation-delay: 4.3s;
+          animation-delay: 4.3s;
+}
+
+#loader-container #neon .lettre:nth-child(8) {
+  -webkit-animation: allumer 1.1s;
+          animation: allumer 1.1s;
+  -webkit-animation-delay: 4.8s;
+          animation-delay: 4.8s;
+}
+
+@-webkit-keyframes chargeur {
+  0% {
+    left: 1.5em;
+  }
+  20% {
+    left: 1.5em;
+  }
+  80% {
+    left: 8em;
+    color: #99E2D0;
+  }
+  81% {
+    left: 8em;
+    color: transparent;
+  }
+  100% {
+    left: 8em;
+    color: transparent;
+  }
+}
+
+@keyframes chargeur {
+  0% {
+    left: 1.5em;
+  }
+  20% {
+    left: 1.5em;
+  }
+  80% {
+    left: 8em;
+    color: #99E2D0;
+  }
+  81% {
+    left: 8em;
+    color: transparent;
+  }
+  100% {
+    left: 8em;
+    color: transparent;
+  }
+}
+
+@-webkit-keyframes allumer {
+  0% {
+    color: #3c0244;
+  }
+  1% {
+    color: #9356DC;
+  }
+  90% {
+    color: #9356DC;
+  }
+  100% {
+    color: #3c0244;
+  }
+}
+
+@keyframes allumer {
+  0% {
+    color: #3c0244;
+  }
+  1% {
+    color: #9356DC;
+  }
+  90% {
+    color: #9356DC;
+  }
+  100% {
+    color: #3c0244;
+  }
+}
+
+@-webkit-keyframes disparaitre {
+  99% {
+    z-index: 2;
+    background: -webkit-gradient(linear, left bottom, left top, from(#460033), to(#301255));
+    background: linear-gradient(to top, #460033, #301255);
+  }
+  100% {
+    z-index: -100;
+    background: none;
+  }
+}
+
+@keyframes disparaitre {
+  99% {
+    z-index: 2;
+    background: -webkit-gradient(linear, left bottom, left top, from(#460033), to(#301255));
+    background: linear-gradient(to top, #460033, #301255);
+  }
+  100% {
+    z-index: -100;
+    background: none;
+  }
+}
+
+/*__________________________________*/
+.btn {
+  -webkit-transition: opacity 300ms;
+  transition: opacity 300ms;
+}
+
+.btn:focus {
+  opacity: 0.6;
+  -webkit-box-shadow: 10px 10px 10px #353535;
+          box-shadow: 10px 10px 10px #353535;
+  color: #f2f2f2;
+}
+
+.mode_emploi:hover .fas {
+  color: #9356DC;
+}
+
+.restaurant_description_icone .far {
+  background-color: white;
+  -webkit-transition: all 1s;
+  transition: all 1s;
+  color: black;
+  z-index: 2;
+}
+
+.restaurant_description_icone .fas {
+  background: -webkit-linear-gradient(#9356DC, #FF79DA);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  z-index: 0;
+}
+
+.restaurant_description_icone:active .far {
+  z-index: -1;
+}
+
+.menu_coeur .far {
+  background-color: #f2f2f2;
+  -webkit-transition: all 1s;
+  transition: all 1s;
+  color: black;
+  z-index: 2;
+}
+
+.menu_coeur .fas {
+  background: -webkit-linear-gradient(#9356DC, #FF79DA);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  z-index: 0;
+}
+
+.menu_coeur:hover .far {
+  z-index: -1;
+}
+
+/*1=entree 2=plat 3=dessert*/
+.les_plats:nth-child(1) {
+  /*parcourir tous les choix de plat*/
+  /*parcourir tous les choix de plat*/
+  /*parcourir tous les choix de plat*/
+  /*parcourir tous les choix de plat*/
+}
+
+.les_plats:nth-child(1) .plat:nth-child(1) {
+  opacity: 0;
+  -webkit-animation: 1.5s linear 200ms apparaitre forwards;
+          animation: 1.5s linear 200ms apparaitre forwards;
+}
+
+.les_plats:nth-child(1) .plat:nth-child(1):hover .validation {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-animation: selectionner 500ms linear;
+          animation: selectionner 500ms linear;
+  -webkit-animation-fill-mode: forwards;
+          animation-fill-mode: forwards;
+}
+
+.les_plats:nth-child(1) .plat:nth-child(1):hover .validation span {
+  /*le symbole tick*/
+  -ms-flex-item-align: center;
+      -ms-grid-row-align: center;
+      align-self: center;
+  margin-bottom: 0.4em;
+  margin-left: 0.4em;
+  font-size: 100px;
+  -webkit-animation: selectionner_tick 500ms linear;
+          animation: selectionner_tick 500ms linear;
+}
+
+.les_plats:nth-child(1) .plat:nth-child(1):hover h3 {
+  /*nom du plat*/
+  -webkit-animation: selectionner_txt 500ms linear;
+          animation: selectionner_txt 500ms linear;
+  -webkit-animation-fill-mode: forwards;
+          animation-fill-mode: forwards;
+}
+
+.les_plats:nth-child(1) .plat:nth-child(1):hover p {
+  /*description du plat*/
+  -webkit-animation: selectionner_txt 500ms linear;
+          animation: selectionner_txt 500ms linear;
+  -webkit-animation-fill-mode: forwards;
+          animation-fill-mode: forwards;
+}
+
+.les_plats:nth-child(1) .plat:nth-child(2) {
+  opacity: 0;
+  -webkit-animation: 1.5s linear 400ms apparaitre forwards;
+          animation: 1.5s linear 400ms apparaitre forwards;
+}
+
+.les_plats:nth-child(1) .plat:nth-child(2):hover .validation {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-animation: selectionner 500ms linear;
+          animation: selectionner 500ms linear;
+  -webkit-animation-fill-mode: forwards;
+          animation-fill-mode: forwards;
+}
+
+.les_plats:nth-child(1) .plat:nth-child(2):hover .validation span {
+  /*le symbole tick*/
+  -ms-flex-item-align: center;
+      -ms-grid-row-align: center;
+      align-self: center;
+  margin-bottom: 0.4em;
+  margin-left: 0.4em;
+  font-size: 100px;
+  -webkit-animation: selectionner_tick 500ms linear;
+          animation: selectionner_tick 500ms linear;
+}
+
+.les_plats:nth-child(1) .plat:nth-child(2):hover h3 {
+  /*nom du plat*/
+  -webkit-animation: selectionner_txt 500ms linear;
+          animation: selectionner_txt 500ms linear;
+  -webkit-animation-fill-mode: forwards;
+          animation-fill-mode: forwards;
+}
+
+.les_plats:nth-child(1) .plat:nth-child(2):hover p {
+  /*description du plat*/
+  -webkit-animation: selectionner_txt 500ms linear;
+          animation: selectionner_txt 500ms linear;
+  -webkit-animation-fill-mode: forwards;
+          animation-fill-mode: forwards;
+}
+
+.les_plats:nth-child(1) .plat:nth-child(3) {
+  opacity: 0;
+  -webkit-animation: 1.5s linear 600ms apparaitre forwards;
+          animation: 1.5s linear 600ms apparaitre forwards;
+}
+
+.les_plats:nth-child(1) .plat:nth-child(3):hover .validation {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-animation: selectionner 500ms linear;
+          animation: selectionner 500ms linear;
+  -webkit-animation-fill-mode: forwards;
+          animation-fill-mode: forwards;
+}
+
+.les_plats:nth-child(1) .plat:nth-child(3):hover .validation span {
+  /*le symbole tick*/
+  -ms-flex-item-align: center;
+      -ms-grid-row-align: center;
+      align-self: center;
+  margin-bottom: 0.4em;
+  margin-left: 0.4em;
+  font-size: 100px;
+  -webkit-animation: selectionner_tick 500ms linear;
+          animation: selectionner_tick 500ms linear;
+}
+
+.les_plats:nth-child(1) .plat:nth-child(3):hover h3 {
+  /*nom du plat*/
+  -webkit-animation: selectionner_txt 500ms linear;
+          animation: selectionner_txt 500ms linear;
+  -webkit-animation-fill-mode: forwards;
+          animation-fill-mode: forwards;
+}
+
+.les_plats:nth-child(1) .plat:nth-child(3):hover p {
+  /*description du plat*/
+  -webkit-animation: selectionner_txt 500ms linear;
+          animation: selectionner_txt 500ms linear;
+  -webkit-animation-fill-mode: forwards;
+          animation-fill-mode: forwards;
+}
+
+.les_plats:nth-child(1) .plat:nth-child(4) {
+  opacity: 0;
+  -webkit-animation: 1.5s linear 800ms apparaitre forwards;
+          animation: 1.5s linear 800ms apparaitre forwards;
+}
+
+.les_plats:nth-child(1) .plat:nth-child(4):hover .validation {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-animation: selectionner 500ms linear;
+          animation: selectionner 500ms linear;
+  -webkit-animation-fill-mode: forwards;
+          animation-fill-mode: forwards;
+}
+
+.les_plats:nth-child(1) .plat:nth-child(4):hover .validation span {
+  /*le symbole tick*/
+  -ms-flex-item-align: center;
+      -ms-grid-row-align: center;
+      align-self: center;
+  margin-bottom: 0.4em;
+  margin-left: 0.4em;
+  font-size: 100px;
+  -webkit-animation: selectionner_tick 500ms linear;
+          animation: selectionner_tick 500ms linear;
+}
+
+.les_plats:nth-child(1) .plat:nth-child(4):hover h3 {
+  /*nom du plat*/
+  -webkit-animation: selectionner_txt 500ms linear;
+          animation: selectionner_txt 500ms linear;
+  -webkit-animation-fill-mode: forwards;
+          animation-fill-mode: forwards;
+}
+
+.les_plats:nth-child(1) .plat:nth-child(4):hover p {
+  /*description du plat*/
+  -webkit-animation: selectionner_txt 500ms linear;
+          animation: selectionner_txt 500ms linear;
+  -webkit-animation-fill-mode: forwards;
+          animation-fill-mode: forwards;
+}
+
+/*1=entree 2=plat 3=dessert*/
+.les_plats:nth-child(2) {
+  /*parcourir tous les choix de plat*/
+  /*parcourir tous les choix de plat*/
+  /*parcourir tous les choix de plat*/
+  /*parcourir tous les choix de plat*/
+}
+
+.les_plats:nth-child(2) .plat:nth-child(1) {
+  opacity: 0;
+  -webkit-animation: 1.5s linear 200ms apparaitre forwards;
+          animation: 1.5s linear 200ms apparaitre forwards;
+}
+
+.les_plats:nth-child(2) .plat:nth-child(1):hover .validation {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-animation: selectionner 500ms linear;
+          animation: selectionner 500ms linear;
+  -webkit-animation-fill-mode: forwards;
+          animation-fill-mode: forwards;
+}
+
+.les_plats:nth-child(2) .plat:nth-child(1):hover .validation span {
+  /*le symbole tick*/
+  -ms-flex-item-align: center;
+      -ms-grid-row-align: center;
+      align-self: center;
+  margin-bottom: 0.4em;
+  margin-left: 0.4em;
+  font-size: 100px;
+  -webkit-animation: selectionner_tick 500ms linear;
+          animation: selectionner_tick 500ms linear;
+}
+
+.les_plats:nth-child(2) .plat:nth-child(1):hover h3 {
+  /*nom du plat*/
+  -webkit-animation: selectionner_txt 500ms linear;
+          animation: selectionner_txt 500ms linear;
+  -webkit-animation-fill-mode: forwards;
+          animation-fill-mode: forwards;
+}
+
+.les_plats:nth-child(2) .plat:nth-child(1):hover p {
+  /*description du plat*/
+  -webkit-animation: selectionner_txt 500ms linear;
+          animation: selectionner_txt 500ms linear;
+  -webkit-animation-fill-mode: forwards;
+          animation-fill-mode: forwards;
+}
+
+.les_plats:nth-child(2) .plat:nth-child(2) {
+  opacity: 0;
+  -webkit-animation: 1.5s linear 400ms apparaitre forwards;
+          animation: 1.5s linear 400ms apparaitre forwards;
+}
+
+.les_plats:nth-child(2) .plat:nth-child(2):hover .validation {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-animation: selectionner 500ms linear;
+          animation: selectionner 500ms linear;
+  -webkit-animation-fill-mode: forwards;
+          animation-fill-mode: forwards;
+}
+
+.les_plats:nth-child(2) .plat:nth-child(2):hover .validation span {
+  /*le symbole tick*/
+  -ms-flex-item-align: center;
+      -ms-grid-row-align: center;
+      align-self: center;
+  margin-bottom: 0.4em;
+  margin-left: 0.4em;
+  font-size: 100px;
+  -webkit-animation: selectionner_tick 500ms linear;
+          animation: selectionner_tick 500ms linear;
+}
+
+.les_plats:nth-child(2) .plat:nth-child(2):hover h3 {
+  /*nom du plat*/
+  -webkit-animation: selectionner_txt 500ms linear;
+          animation: selectionner_txt 500ms linear;
+  -webkit-animation-fill-mode: forwards;
+          animation-fill-mode: forwards;
+}
+
+.les_plats:nth-child(2) .plat:nth-child(2):hover p {
+  /*description du plat*/
+  -webkit-animation: selectionner_txt 500ms linear;
+          animation: selectionner_txt 500ms linear;
+  -webkit-animation-fill-mode: forwards;
+          animation-fill-mode: forwards;
+}
+
+.les_plats:nth-child(2) .plat:nth-child(3) {
+  opacity: 0;
+  -webkit-animation: 1.5s linear 600ms apparaitre forwards;
+          animation: 1.5s linear 600ms apparaitre forwards;
+}
+
+.les_plats:nth-child(2) .plat:nth-child(3):hover .validation {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-animation: selectionner 500ms linear;
+          animation: selectionner 500ms linear;
+  -webkit-animation-fill-mode: forwards;
+          animation-fill-mode: forwards;
+}
+
+.les_plats:nth-child(2) .plat:nth-child(3):hover .validation span {
+  /*le symbole tick*/
+  -ms-flex-item-align: center;
+      -ms-grid-row-align: center;
+      align-self: center;
+  margin-bottom: 0.4em;
+  margin-left: 0.4em;
+  font-size: 100px;
+  -webkit-animation: selectionner_tick 500ms linear;
+          animation: selectionner_tick 500ms linear;
+}
+
+.les_plats:nth-child(2) .plat:nth-child(3):hover h3 {
+  /*nom du plat*/
+  -webkit-animation: selectionner_txt 500ms linear;
+          animation: selectionner_txt 500ms linear;
+  -webkit-animation-fill-mode: forwards;
+          animation-fill-mode: forwards;
+}
+
+.les_plats:nth-child(2) .plat:nth-child(3):hover p {
+  /*description du plat*/
+  -webkit-animation: selectionner_txt 500ms linear;
+          animation: selectionner_txt 500ms linear;
+  -webkit-animation-fill-mode: forwards;
+          animation-fill-mode: forwards;
+}
+
+.les_plats:nth-child(2) .plat:nth-child(4) {
+  opacity: 0;
+  -webkit-animation: 1.5s linear 800ms apparaitre forwards;
+          animation: 1.5s linear 800ms apparaitre forwards;
+}
+
+.les_plats:nth-child(2) .plat:nth-child(4):hover .validation {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-animation: selectionner 500ms linear;
+          animation: selectionner 500ms linear;
+  -webkit-animation-fill-mode: forwards;
+          animation-fill-mode: forwards;
+}
+
+.les_plats:nth-child(2) .plat:nth-child(4):hover .validation span {
+  /*le symbole tick*/
+  -ms-flex-item-align: center;
+      -ms-grid-row-align: center;
+      align-self: center;
+  margin-bottom: 0.4em;
+  margin-left: 0.4em;
+  font-size: 100px;
+  -webkit-animation: selectionner_tick 500ms linear;
+          animation: selectionner_tick 500ms linear;
+}
+
+.les_plats:nth-child(2) .plat:nth-child(4):hover h3 {
+  /*nom du plat*/
+  -webkit-animation: selectionner_txt 500ms linear;
+          animation: selectionner_txt 500ms linear;
+  -webkit-animation-fill-mode: forwards;
+          animation-fill-mode: forwards;
+}
+
+.les_plats:nth-child(2) .plat:nth-child(4):hover p {
+  /*description du plat*/
+  -webkit-animation: selectionner_txt 500ms linear;
+          animation: selectionner_txt 500ms linear;
+  -webkit-animation-fill-mode: forwards;
+          animation-fill-mode: forwards;
+}
+
+/*1=entree 2=plat 3=dessert*/
+.les_plats:nth-child(3) {
+  /*parcourir tous les choix de plat*/
+  /*parcourir tous les choix de plat*/
+  /*parcourir tous les choix de plat*/
+  /*parcourir tous les choix de plat*/
+}
+
+.les_plats:nth-child(3) .plat:nth-child(1) {
+  opacity: 0;
+  -webkit-animation: 1.5s linear 200ms apparaitre forwards;
+          animation: 1.5s linear 200ms apparaitre forwards;
+}
+
+.les_plats:nth-child(3) .plat:nth-child(1):hover .validation {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-animation: selectionner 500ms linear;
+          animation: selectionner 500ms linear;
+  -webkit-animation-fill-mode: forwards;
+          animation-fill-mode: forwards;
+}
+
+.les_plats:nth-child(3) .plat:nth-child(1):hover .validation span {
+  /*le symbole tick*/
+  -ms-flex-item-align: center;
+      -ms-grid-row-align: center;
+      align-self: center;
+  margin-bottom: 0.4em;
+  margin-left: 0.4em;
+  font-size: 100px;
+  -webkit-animation: selectionner_tick 500ms linear;
+          animation: selectionner_tick 500ms linear;
+}
+
+.les_plats:nth-child(3) .plat:nth-child(1):hover h3 {
+  /*nom du plat*/
+  -webkit-animation: selectionner_txt 500ms linear;
+          animation: selectionner_txt 500ms linear;
+  -webkit-animation-fill-mode: forwards;
+          animation-fill-mode: forwards;
+}
+
+.les_plats:nth-child(3) .plat:nth-child(1):hover p {
+  /*description du plat*/
+  -webkit-animation: selectionner_txt 500ms linear;
+          animation: selectionner_txt 500ms linear;
+  -webkit-animation-fill-mode: forwards;
+          animation-fill-mode: forwards;
+}
+
+.les_plats:nth-child(3) .plat:nth-child(2) {
+  opacity: 0;
+  -webkit-animation: 1.5s linear 400ms apparaitre forwards;
+          animation: 1.5s linear 400ms apparaitre forwards;
+}
+
+.les_plats:nth-child(3) .plat:nth-child(2):hover .validation {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-animation: selectionner 500ms linear;
+          animation: selectionner 500ms linear;
+  -webkit-animation-fill-mode: forwards;
+          animation-fill-mode: forwards;
+}
+
+.les_plats:nth-child(3) .plat:nth-child(2):hover .validation span {
+  /*le symbole tick*/
+  -ms-flex-item-align: center;
+      -ms-grid-row-align: center;
+      align-self: center;
+  margin-bottom: 0.4em;
+  margin-left: 0.4em;
+  font-size: 100px;
+  -webkit-animation: selectionner_tick 500ms linear;
+          animation: selectionner_tick 500ms linear;
+}
+
+.les_plats:nth-child(3) .plat:nth-child(2):hover h3 {
+  /*nom du plat*/
+  -webkit-animation: selectionner_txt 500ms linear;
+          animation: selectionner_txt 500ms linear;
+  -webkit-animation-fill-mode: forwards;
+          animation-fill-mode: forwards;
+}
+
+.les_plats:nth-child(3) .plat:nth-child(2):hover p {
+  /*description du plat*/
+  -webkit-animation: selectionner_txt 500ms linear;
+          animation: selectionner_txt 500ms linear;
+  -webkit-animation-fill-mode: forwards;
+          animation-fill-mode: forwards;
+}
+
+.les_plats:nth-child(3) .plat:nth-child(3) {
+  opacity: 0;
+  -webkit-animation: 1.5s linear 600ms apparaitre forwards;
+          animation: 1.5s linear 600ms apparaitre forwards;
+}
+
+.les_plats:nth-child(3) .plat:nth-child(3):hover .validation {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-animation: selectionner 500ms linear;
+          animation: selectionner 500ms linear;
+  -webkit-animation-fill-mode: forwards;
+          animation-fill-mode: forwards;
+}
+
+.les_plats:nth-child(3) .plat:nth-child(3):hover .validation span {
+  /*le symbole tick*/
+  -ms-flex-item-align: center;
+      -ms-grid-row-align: center;
+      align-self: center;
+  margin-bottom: 0.4em;
+  margin-left: 0.4em;
+  font-size: 100px;
+  -webkit-animation: selectionner_tick 500ms linear;
+          animation: selectionner_tick 500ms linear;
+}
+
+.les_plats:nth-child(3) .plat:nth-child(3):hover h3 {
+  /*nom du plat*/
+  -webkit-animation: selectionner_txt 500ms linear;
+          animation: selectionner_txt 500ms linear;
+  -webkit-animation-fill-mode: forwards;
+          animation-fill-mode: forwards;
+}
+
+.les_plats:nth-child(3) .plat:nth-child(3):hover p {
+  /*description du plat*/
+  -webkit-animation: selectionner_txt 500ms linear;
+          animation: selectionner_txt 500ms linear;
+  -webkit-animation-fill-mode: forwards;
+          animation-fill-mode: forwards;
+}
+
+.les_plats:nth-child(3) .plat:nth-child(4) {
+  opacity: 0;
+  -webkit-animation: 1.5s linear 800ms apparaitre forwards;
+          animation: 1.5s linear 800ms apparaitre forwards;
+}
+
+.les_plats:nth-child(3) .plat:nth-child(4):hover .validation {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-animation: selectionner 500ms linear;
+          animation: selectionner 500ms linear;
+  -webkit-animation-fill-mode: forwards;
+          animation-fill-mode: forwards;
+}
+
+.les_plats:nth-child(3) .plat:nth-child(4):hover .validation span {
+  /*le symbole tick*/
+  -ms-flex-item-align: center;
+      -ms-grid-row-align: center;
+      align-self: center;
+  margin-bottom: 0.4em;
+  margin-left: 0.4em;
+  font-size: 100px;
+  -webkit-animation: selectionner_tick 500ms linear;
+          animation: selectionner_tick 500ms linear;
+}
+
+.les_plats:nth-child(3) .plat:nth-child(4):hover h3 {
+  /*nom du plat*/
+  -webkit-animation: selectionner_txt 500ms linear;
+          animation: selectionner_txt 500ms linear;
+  -webkit-animation-fill-mode: forwards;
+          animation-fill-mode: forwards;
+}
+
+.les_plats:nth-child(3) .plat:nth-child(4):hover p {
+  /*description du plat*/
+  -webkit-animation: selectionner_txt 500ms linear;
+          animation: selectionner_txt 500ms linear;
+  -webkit-animation-fill-mode: forwards;
+          animation-fill-mode: forwards;
+}
+
+/*1=entree 2=plat 3=dessert*/
+.les_plats:nth-child(4) {
+  /*parcourir tous les choix de plat*/
+  /*parcourir tous les choix de plat*/
+  /*parcourir tous les choix de plat*/
+  /*parcourir tous les choix de plat*/
+}
+
+.les_plats:nth-child(4) .plat:nth-child(1) {
+  opacity: 0;
+  -webkit-animation: 1.5s linear 200ms apparaitre forwards;
+          animation: 1.5s linear 200ms apparaitre forwards;
+}
+
+.les_plats:nth-child(4) .plat:nth-child(1):hover .validation {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-animation: selectionner 500ms linear;
+          animation: selectionner 500ms linear;
+  -webkit-animation-fill-mode: forwards;
+          animation-fill-mode: forwards;
+}
+
+.les_plats:nth-child(4) .plat:nth-child(1):hover .validation span {
+  /*le symbole tick*/
+  -ms-flex-item-align: center;
+      -ms-grid-row-align: center;
+      align-self: center;
+  margin-bottom: 0.4em;
+  margin-left: 0.4em;
+  font-size: 100px;
+  -webkit-animation: selectionner_tick 500ms linear;
+          animation: selectionner_tick 500ms linear;
+}
+
+.les_plats:nth-child(4) .plat:nth-child(1):hover h3 {
+  /*nom du plat*/
+  -webkit-animation: selectionner_txt 500ms linear;
+          animation: selectionner_txt 500ms linear;
+  -webkit-animation-fill-mode: forwards;
+          animation-fill-mode: forwards;
+}
+
+.les_plats:nth-child(4) .plat:nth-child(1):hover p {
+  /*description du plat*/
+  -webkit-animation: selectionner_txt 500ms linear;
+          animation: selectionner_txt 500ms linear;
+  -webkit-animation-fill-mode: forwards;
+          animation-fill-mode: forwards;
+}
+
+.les_plats:nth-child(4) .plat:nth-child(2) {
+  opacity: 0;
+  -webkit-animation: 1.5s linear 400ms apparaitre forwards;
+          animation: 1.5s linear 400ms apparaitre forwards;
+}
+
+.les_plats:nth-child(4) .plat:nth-child(2):hover .validation {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-animation: selectionner 500ms linear;
+          animation: selectionner 500ms linear;
+  -webkit-animation-fill-mode: forwards;
+          animation-fill-mode: forwards;
+}
+
+.les_plats:nth-child(4) .plat:nth-child(2):hover .validation span {
+  /*le symbole tick*/
+  -ms-flex-item-align: center;
+      -ms-grid-row-align: center;
+      align-self: center;
+  margin-bottom: 0.4em;
+  margin-left: 0.4em;
+  font-size: 100px;
+  -webkit-animation: selectionner_tick 500ms linear;
+          animation: selectionner_tick 500ms linear;
+}
+
+.les_plats:nth-child(4) .plat:nth-child(2):hover h3 {
+  /*nom du plat*/
+  -webkit-animation: selectionner_txt 500ms linear;
+          animation: selectionner_txt 500ms linear;
+  -webkit-animation-fill-mode: forwards;
+          animation-fill-mode: forwards;
+}
+
+.les_plats:nth-child(4) .plat:nth-child(2):hover p {
+  /*description du plat*/
+  -webkit-animation: selectionner_txt 500ms linear;
+          animation: selectionner_txt 500ms linear;
+  -webkit-animation-fill-mode: forwards;
+          animation-fill-mode: forwards;
+}
+
+.les_plats:nth-child(4) .plat:nth-child(3) {
+  opacity: 0;
+  -webkit-animation: 1.5s linear 600ms apparaitre forwards;
+          animation: 1.5s linear 600ms apparaitre forwards;
+}
+
+.les_plats:nth-child(4) .plat:nth-child(3):hover .validation {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-animation: selectionner 500ms linear;
+          animation: selectionner 500ms linear;
+  -webkit-animation-fill-mode: forwards;
+          animation-fill-mode: forwards;
+}
+
+.les_plats:nth-child(4) .plat:nth-child(3):hover .validation span {
+  /*le symbole tick*/
+  -ms-flex-item-align: center;
+      -ms-grid-row-align: center;
+      align-self: center;
+  margin-bottom: 0.4em;
+  margin-left: 0.4em;
+  font-size: 100px;
+  -webkit-animation: selectionner_tick 500ms linear;
+          animation: selectionner_tick 500ms linear;
+}
+
+.les_plats:nth-child(4) .plat:nth-child(3):hover h3 {
+  /*nom du plat*/
+  -webkit-animation: selectionner_txt 500ms linear;
+          animation: selectionner_txt 500ms linear;
+  -webkit-animation-fill-mode: forwards;
+          animation-fill-mode: forwards;
+}
+
+.les_plats:nth-child(4) .plat:nth-child(3):hover p {
+  /*description du plat*/
+  -webkit-animation: selectionner_txt 500ms linear;
+          animation: selectionner_txt 500ms linear;
+  -webkit-animation-fill-mode: forwards;
+          animation-fill-mode: forwards;
+}
+
+.les_plats:nth-child(4) .plat:nth-child(4) {
+  opacity: 0;
+  -webkit-animation: 1.5s linear 800ms apparaitre forwards;
+          animation: 1.5s linear 800ms apparaitre forwards;
+}
+
+.les_plats:nth-child(4) .plat:nth-child(4):hover .validation {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-animation: selectionner 500ms linear;
+          animation: selectionner 500ms linear;
+  -webkit-animation-fill-mode: forwards;
+          animation-fill-mode: forwards;
+}
+
+.les_plats:nth-child(4) .plat:nth-child(4):hover .validation span {
+  /*le symbole tick*/
+  -ms-flex-item-align: center;
+      -ms-grid-row-align: center;
+      align-self: center;
+  margin-bottom: 0.4em;
+  margin-left: 0.4em;
+  font-size: 100px;
+  -webkit-animation: selectionner_tick 500ms linear;
+          animation: selectionner_tick 500ms linear;
+}
+
+.les_plats:nth-child(4) .plat:nth-child(4):hover h3 {
+  /*nom du plat*/
+  -webkit-animation: selectionner_txt 500ms linear;
+          animation: selectionner_txt 500ms linear;
+  -webkit-animation-fill-mode: forwards;
+          animation-fill-mode: forwards;
+}
+
+.les_plats:nth-child(4) .plat:nth-child(4):hover p {
+  /*description du plat*/
+  -webkit-animation: selectionner_txt 500ms linear;
+          animation: selectionner_txt 500ms linear;
+  -webkit-animation-fill-mode: forwards;
+          animation-fill-mode: forwards;
+}
+
+@-webkit-keyframes apparaitre {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes apparaitre {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@-webkit-keyframes selectionner {
+  0% {
+    font-size: 6em;
+    text-align: center;
+    margin: 0;
+    padding-top: 0.4em;
+    color: white;
+    background: #99E2D0;
+  }
+  100% {
+    -webkit-transform: scaleX(1);
+            transform: scaleX(1);
+    width: 30%;
+    font-size: 6em;
+    text-align: center;
+    margin: 0;
+    padding-top: 0.4em;
+    color: white;
+    background: #99E2D0;
+  }
+}
+
+@keyframes selectionner {
+  0% {
+    font-size: 6em;
+    text-align: center;
+    margin: 0;
+    padding-top: 0.4em;
+    color: white;
+    background: #99E2D0;
+  }
+  100% {
+    -webkit-transform: scaleX(1);
+            transform: scaleX(1);
+    width: 30%;
+    font-size: 6em;
+    text-align: center;
+    margin: 0;
+    padding-top: 0.4em;
+    color: white;
+    background: #99E2D0;
+  }
+}
+
+@-webkit-keyframes selectionner_tick {
+  0% {
+    -webkit-transform: rotate(0deg);
+            transform: rotate(0deg);
+  }
+  100% {
+    -webkit-transform: rotate(360deg);
+            transform: rotate(360deg);
+  }
+}
+
+@keyframes selectionner_tick {
+  0% {
+    -webkit-transform: rotate(0deg);
+            transform: rotate(0deg);
+  }
+  100% {
+    -webkit-transform: rotate(360deg);
+            transform: rotate(360deg);
+  }
+}
+
+@-webkit-keyframes selectionner_txt {
+  0% {
+    width: 100%;
+  }
+  100% {
+    width: 90%;
+  }
+}
+
+@keyframes selectionner_txt {
+  0% {
+    width: 100%;
+  }
+  100% {
+    width: 90%;
+  }
+}
+
+.btn {
+  -ms-flex-item-align: center;
+      -ms-grid-row-align: center;
+      align-self: center;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  border-color: transparent;
+  font-size: 2.6em;
+  height: 3em;
+  -webkit-box-shadow: 10px 10px 10px #cccccc;
+          box-shadow: 10px 10px 10px #cccccc;
+  border-radius: 50em;
+  background: -webkit-gradient(linear, left top, right bottom, from(#FF79DA), to(#9356DC));
+  background: linear-gradient(to bottom right, #FF79DA, #9356DC);
+  color: white;
+}
+
+header {
+  height: 2em;
+  font-size: 7.5em;
+  text-align: center;
+  line-height: 2em;
+}
+
+.header_resto {
+  font-size: 5em;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.header_resto > .fas {
+  margin-left: 1.2em;
+  margin-right: 2em;
+  font-size: 0.65em;
+  width: 0.2em;
+  -ms-flex-item-align: center;
+      -ms-grid-row-align: center;
+      align-self: center;
+  color: black;
+  text-decoration: none;
+}
+
+.header_resto > .logo {
+  padding-left: 1.5em;
+}
+
+footer {
+  height: 30em;
+  background-color: #353535;
+  color: white;
+  line-height: 5em;
+}
+
+footer > ul {
+  list-style: none;
+}
+
+footer .logo {
+  line-height: 3em;
+}
+
+#resto_footer::before {
+  font-family: "Font Awesome 5 Free";
+  font-weight: 800;
+  content: "\f2e7";
+  margin-right: 0.5em;
+}
+
+#partenaire_footer::before {
+  font-family: "Font Awesome 5 Free";
+  font-weight: 800;
+  content: "\f4c4";
+  margin-right: 0.5em;
+}
+
+/* localisation*/
+#localisation {
+  height: 55em;
+  background-color: #f1f2f7;
+}
+
+#localisation_recherche {
+  height: 15%;
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  background-color: #d1d2d4;
+}
+
+#icone_position {
+  font-size: 2.5em;
+  -ms-flex-item-align: center;
+      -ms-grid-row-align: center;
+      align-self: center;
+  padding-left: 2em;
+  padding-right: 2em;
+}
+
+#entrez_adresse {
+  font-size: 3.5em;
+  background-color: #cccccc;
+  border: none;
+}
+
+#entrez_adresse::-webkit-input-placeholder {
+  color: black;
+  font-size: 0.8em;
+}
+
+#entrez_adresse:-ms-input-placeholder {
+  color: black;
+  font-size: 0.8em;
+}
+
+#entrez_adresse::-ms-input-placeholder {
+  color: black;
+  font-size: 0.8em;
+}
+
+#entrez_adresse::placeholder {
+  color: black;
+  font-size: 0.8em;
+}
+
+#localisation_resultat {
+  height: 85%;
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  text-align: center;
+}
+
+#localisation_resultat h1 {
+  padding-left: 2em;
+  padding-right: 2em;
+  padding-top: 1em;
+  padding-bottom: 0em;
+}
+
+#localisation_resultat p {
+  margin-top: 0;
+  padding-top: 0;
+  padding-bottom: 0e;
+}
+
+#explorer {
+  padding-left: 1.5em;
+  padding-right: 1.5em;
+}
+
+/* fonctionement*/
+#fonctionnement {
+  height: 60em;
+  padding-bottom: 2em;
+  padding-left: 2em;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  padding-bottom: 10em;
+}
+
+.mode_emploi {
+  margin-left: 5em;
+  margin-right: 5em;
+  height: 12em;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  background-color: #f1f2f7;
+  border-radius: 50px;
+  -webkit-box-shadow: 10px 10px 10px #cccccc;
+          box-shadow: 10px 10px 10px #cccccc;
+  -ms-flex-line-pack: distribute;
+      align-content: space-around;
+}
+
+.mode_emploi_nombre {
+  border-radius: 50%;
+  background-color: #9356DC;
+  color: white;
+  width: 1.5em;
+  height: 1.5em;
+  text-align: center;
+  -ms-flex-item-align: center;
+      -ms-grid-row-align: center;
+      align-self: center;
+  font-size: 2.5em;
+  position: relative;
+  right: 1em;
+}
+
+.mode_emploi > .fas {
+  font-size: 3em;
+  color: grey;
+  margin-right: 2em;
+  margin-left: 1em;
+  -ms-flex-item-align: center;
+      -ms-grid-row-align: center;
+      align-self: center;
+}
+
+.mode_emploi_etape {
+  -ms-flex-item-align: center;
+      -ms-grid-row-align: center;
+      align-self: center;
+}
+
+/* restaurants */
+#liste_des_restaurants {
+  height: 190em;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  background-color: #f1f2f7;
+  padding-top: 5em;
+  padding-bottom: 10em;
+}
+
+#liste_des_restaurants h1 {
+  margin-left: 0.5em;
+}
+
+.restaurant {
+  margin-left: 2em;
+  margin-right: 2em;
+  height: 41em;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  overflow: hidden;
+  border-radius: 50px;
+  -webkit-box-shadow: 10px 10px 10px #cccccc;
+          box-shadow: 10px 10px 10px #cccccc;
+  text-decoration: none;
+}
+
+.restaurant_nouveau {
+  display: none;
+  border: #99E2D0 solid 2px;
+}
+
+.restaurant_photo {
+  width: 100%;
+  height: 70%;
+  overflow: hidden;
+}
+
+.restaurant_photo > img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+.restaurant_description {
+  padding-left: 2em;
+  width: 100%;
+  height: 30%;
+  background-color: white;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.restaurant_description_txt {
+  color: black;
+  text-decoration: none;
+  line-height: 1.3em;
+}
+
+.restaurant_description_icone {
+  margin-right: 2em;
+  -ms-flex-item-align: center;
+      align-self: center;
+  font-size: 4em;
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.restaurant_description_icone .far {
+  position: absolute;
+  left: 0;
+}
+/*# sourceMappingURL=main.css.map */

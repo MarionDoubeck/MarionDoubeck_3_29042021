@@ -1,0 +1,321 @@
+
+@import"../base/typography";
+@import"../utils/variables";
+$color-bgloader:rgb(60, 2, 68);
+
+#loader-container{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    z-index: 4;
+    background:darken($color-primary,40);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    animation:disparaitre 6s linear forwards;
+    #car,#fork,#phone{
+        font-size: 6em;
+        color: $color-tertiary;
+        position:absolute;
+        top : 420px;
+        z-index: 4;
+        animation:disparaitre 6s linear forwards;
+        @media (min-width:1000px){
+            font-size: 60px;
+            top:220px
+        }
+    }
+    #phone{
+        left:50px;
+        animation:disparaitre 6s linear forwards;
+        @media (min-width:1000px){
+            left:10%;
+        }
+    }
+    #fork{
+        right: 50px;
+        animation:disparaitre 6s linear forwards;
+        @media (min-width:1000px){
+            right:10%;
+        }
+    }
+    #car{
+        animation: chargeur 5.8s linear infinite forwards ;
+        animation-delay: 1ms;
+        @media (min-width:1000px){
+            display: none;
+            }
+    }
+    #neon{
+        position: absolute;
+        top : 400px;
+        font-size: 6em;
+        font-family: 'Shrikhand';
+        color: darken($color-primary,40);
+        @media (min-width:1000px){
+            font-size: 60px;
+            top:210px;
+            }
+        .lettre{
+        &:nth-child(1){
+            animation: allumer 3.9s forwards;
+            animation-delay: 1.3s;
+        }
+        &:nth-child(2){
+            animation: allumer 3.5s forwards;
+            animation-delay: 1.9s;
+        }
+        &:nth-child(3){
+            animation: allumer 3.1s forwards;
+            animation-delay: 2.5s;
+        }
+        &:nth-child(4){
+            animation: allumer 2.7s forwards;
+            animation-delay: 2.9s;
+        }
+        &:nth-child(5){
+            animation: allumer 2.3s forwards;
+            animation-delay: 3.3s;
+        }
+        &:nth-child(6){
+            animation: allumer 1.9s forwards;
+            animation-delay: 3.8s;
+        }
+        &:nth-child(7){
+            animation: allumer 1.5s forwards;
+            animation-delay: 4.3s;
+        }
+        &:nth-child(8){
+            animation: allumer 1.1s forwards;
+            animation-delay: 4.8s;
+        }
+        }
+    }
+}
+@keyframes chargeur {
+  0%{   
+    left : 1.5em;
+  }
+  20%{   
+    left : 1.5em;
+  }
+  80%{
+    left:8em;
+    color:$color-tertiary;
+  }
+  81%{
+    left:8em;
+    color:transparent;
+  }
+  100%{
+    left:8em;
+    color:transparent;
+  }
+}
+
+@keyframes allumer{
+    0%{color: darken($color-primary,40);
+    }
+    1%{color:$color-secondary;
+    }
+    90%{color: $color-secondary;
+    }
+    99%{color:darken($color-primary,40);
+    }
+    100%{color:transparent;
+    }
+}
+
+
+
+@keyframes disparaitre{
+99%{z-index: 2;
+    background:darken($color-primary,40);
+    color: $color-tertiary;
+}
+100%{z-index: -100;
+    background-color: transparent;
+    color: transparent;
+    }
+}
+
+    
+/*__________________________________*/
+
+
+.btn{
+    transition: opacity 300ms;
+    &:focus{
+        opacity: 0.6;
+        box-shadow: 10px 10px 10px $color-bgfooter;
+        color: $color-bgresto;
+    }
+}
+
+.mode_emploi{
+    &:hover .fas{
+        color: $color-primary;
+    }
+}
+.restaurant_description_icone{
+    .far{
+    background-color: $color-bgresto;
+    transition: all 1s;
+    color: black;
+    z-index: 1;
+    }
+    .fas{
+    background: -webkit-linear-gradient($color-primary, $color-secondary);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    z-index: 0;
+    }
+}
+
+.restaurant_description_icone{
+    &:active .far{
+        z-index: -1;
+    }
+}
+
+
+
+.menu_coeur{
+    .far{
+    background-color: $color-bgresto;
+    transition: all 1s;
+    color: black;
+    z-index: 2;
+    }
+    .fas{
+    background: -webkit-linear-gradient($color-primary, $color-secondary);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    z-index: 0;
+    }
+    &:hover .far{
+    z-index: -1;
+    }
+}
+
+
+
+@for $i from 1 through 4 {    /*1=entree 2=plat 3=dessert*/
+    .les_plats:nth-child(#{$i}){
+        @for $j from 1 through 5 {  /*parcourir tous les choix de plat*/
+            .plat:nth-child(#{$j}){
+                opacity: 0;
+                $d:$j*200;
+                animation: 1.5s linear #{$d}ms apparaitre forwards;
+                &:hover{
+                            .validation{
+                                display: flex;
+                                animation:selectionner 300ms linear;
+                                animation-fill-mode: forwards;
+                                span{   /*le symbole tick*/
+                                    align-self: center;
+                                    margin-bottom: 0.4em;
+                                    margin-left:0.4em;
+                                    font-size:100px;
+                                    @media (min-width:1000px){
+                                        font-size: 30px;
+                                        margin: 0 auto 0;
+                                        padding: 0;
+                                        text-align: center;
+                                        }
+                                    animation:selectionner_tick 300ms linear;
+                                    }
+                            }
+                            h3{ /*nom du plat*/
+                                animation:selectionner_txt 300ms linear;
+                                animation-fill-mode: forwards;
+                            }
+                            p{ /*description du plat*/
+                                animation: selectionner_txt 300ms linear;
+                                animation-fill-mode: forwards;
+                            }
+                        }
+                      
+            }
+        }
+    }
+
+}
+@keyframes apparaitre{
+    0%{opacity: 0;}
+    100%{opacity:1;}
+}
+
+@media (max-width:999px) {
+    @keyframes selectionner{    
+        0%{font-size: 6em;
+            text-align: center;
+            margin: 0;
+            padding-top: 0.4em;
+            color: white;
+            background: $color-tertiary;
+            @media (min-width:1000px){
+                font-size: 30px;
+                padding-top: 0;
+                height: 10px;
+                }
+            }
+        100%{
+            transform:scaleX(1);
+            width: 30%;
+            font-size: 6em;
+            text-align: center;
+            margin: 0;
+            padding-top: 0.4em;
+            color: white;
+            background: $color-tertiary;
+            @media (min-width:1000px){
+                font-size: 30px;
+                padding-top: 0;
+                height: 10px;
+                text-align: center;
+                }
+            }
+        
+    }
+}
+@media (min-width:1000px) {
+    @keyframes selectionner{    
+        0%{font-size: 6em;
+            text-align: center;
+            margin: 0;
+            color: white;
+            background: $color-tertiary;
+            font-size: 30px;
+            padding-top: 0;
+            
+            }
+        100%{
+            transform:scaleX(1);
+            width: 30%;
+            text-align: center;
+            margin: 0;
+            padding-top: 0.4em;
+            color: white;
+            background: $color-tertiary;
+            font-size: 30px;
+            padding-top: 0;
+            
+            }
+        
+    }
+}
+
+@keyframes selectionner_tick{ 
+    0%{
+        transform:rotate(0deg);
+    }
+    100%{
+        transform:rotate(360deg);
+    }
+}
+
+@keyframes selectionner_txt{ 
+0%{width:100%;}
+100%{width: 90%;}
+}

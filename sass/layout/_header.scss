@@ -1,0 +1,10 @@
+header{
+    height: 2em;
+    font-size: 7.5em;
+    text-align: center;
+    line-height: 2em;
+    @media (min-width:1000px){
+        height: 130px;
+        font-size: 60px;
+        }
+}
